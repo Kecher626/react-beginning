@@ -4,7 +4,7 @@
 import { useState } from "react"; //跟ReactDom(渲染機制)綁在一起的 可讓react及時吃到資訊 而不像宣告變數
 import { v4 } from "uuid";
 
-const Edit = ({ add }) => {
+const Edit = ({ add, summittingStatus }) => {
   // 宣告各欄位(note, date, time)為useState
   const [note, setNote] = useState("");
   function noteChange(e) {
@@ -24,6 +24,7 @@ const Edit = ({ add }) => {
   // map不是物件的方法 是陣列的
   // 要拿到上一個值再把現在的data塞進去
   function addItem() {
+    summittingStatus.current = true
     add(function (prevData) {
       return [
         {

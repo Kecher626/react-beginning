@@ -28,7 +28,6 @@
 5. 在/src/index.js內 (import Home from "./Pages/Home") 並在 ReactDOM.render(<React.StrictMode> 下新增<Home />)
 6. 用map rendor需加key key需為唯一 詳細備註在List.js
 
-
 # 開始切版
 1. 在/src/pages/home/components內 新增Edit.js Item.js List.js
 2. 將上一步所建components引入 home的index.js裡 並在home組件下寫 <Edit /> <List /> ... 即可使用各區塊組件
@@ -49,6 +48,7 @@
 + style components => css 和 components寫在同一js檔的概念/技術?
 
 + 生成唯一key 可用uuid套件 => npm install uuid
++ 可使用json-server來模擬後端 db以app/db.json為格式
 
 
 

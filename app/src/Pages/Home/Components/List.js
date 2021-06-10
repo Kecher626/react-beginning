@@ -1,6 +1,6 @@
 import Item from "./Item";
 
-const List = ({ listData, deleteData }) => {
+const List = ({ listData, deleteData, summittingStatus }) => {
   return (
     <div className="list">
       {
@@ -14,7 +14,7 @@ const List = ({ listData, deleteData }) => {
             note = "default",
             date = "default",
             time = "default",
-            id,
+            id
           } = item;
 
           //等號左邊為 Item 裡的原件 右邊為上面定義
@@ -26,6 +26,7 @@ const List = ({ listData, deleteData }) => {
               date={date}
               time={time}
               deleteData={deleteData}
+              summittingStatus={summittingStatus}
             />
           );
         })
